@@ -9,21 +9,28 @@ app.get("/", (req, res) => {
 });
 
 app.get("/api/test-db", async (req, res) => {
+    const config = {
+        host: process.env.DB_HOST,
+        user: process.env.DB_USER,
+        database: process.env.DB_NAME,
+        port: process.env.DB_PORT,
+        hasPassword: !!process.env.DB_PASSWORD
+    };
+
     const db = require("./config/db");
     try {
         const [rows] = await db.query("SELECT 1 as test");
-        res.json({ message: "Database connection successful", data: rows });
+        res.json({
+            message: "Database connection successful",
+            env_status: config,
+            data: rows
+        });
     } catch (error) {
         res.status(500).json({
             message: "Database connection failed",
             error: error.message,
-            stack: error.stack,
-            config: {
-                host: process.env.DB_HOST,
-                user: process.env.DB_USER,
-                database: process.env.DB_NAME,
-                port: process.env.DB_PORT
-            }
+            env_status: config,
+            advice: "If host is 127.0.0.1, your environment variables are NOT being loaded. Make sure you set them in the Vercel Dashboard (Settings > Environment Variables)."
         });
     }
 });
