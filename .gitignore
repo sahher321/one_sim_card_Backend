@@ -1,2 +1,22 @@
-want to put node modules in gitignore
+# Node modules
 node_modules/
+
+# Logs
+logs/
+*.log
+npm-debug.log*
+
+# Environment variables
+.env
+
+# OS files
+.DS_Store
+Thumbs.db
+
+# Build directories
+dist/
+build/
+
+# IDE files
+.vscode/
+.idea/
