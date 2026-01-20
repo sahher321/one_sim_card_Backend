@@ -1,3 +1,2 @@
-//node
+want to put node modules in gitignore
 node_modules/
-npm-debug.log
