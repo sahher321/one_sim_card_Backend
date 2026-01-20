@@ -3,6 +3,10 @@ const app = express();
 const cors = require("cors");
 app.use(cors());
 
+app.get("/", (req, res) => {
+    res.send("one sim backend run successfully");
+});
+
 app.use(express.json());
 
 const coverageRoutes = require("./routes/coverage.routes");
