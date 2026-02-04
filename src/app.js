@@ -58,11 +58,11 @@ app.use("/api/content", contentRoutes);
 const packageGroupRoutes = require("./routes/packageGroup.routes");
 app.use("/api/package-group", packageGroupRoutes);
 
-const contentRoute = require('./routes/contentRoutes');
-app.use('/api', contentRoute);
+const partnerRoutes = require("./routes/partner.routes");
+app.use("/api/partners", partnerRoutes);
 
-const keyFeaturesRoutes = require('./routes/keyFeaturesRoutes');
-app.use('/api', keyFeaturesRoutes);
+const keyFeaturesRoutes = require("./routes/keyFeatures.routes");
+app.use("/api/key-features", keyFeaturesRoutes);
 
 
 

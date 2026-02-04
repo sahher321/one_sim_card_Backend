@@ -1,4 +1,4 @@
-const service = require('../services/keyFeaturesService');
+const service = require('../services/keyFeatures.service');
 
 exports.getKeyFeatures = async (req, res) => {
     try {
