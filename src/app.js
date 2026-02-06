@@ -64,6 +64,9 @@ app.use("/api/partners", partnerRoutes);
 const keyFeaturesRoutes = require("./routes/keyFeatures.routes");
 app.use("/api/key-features", keyFeaturesRoutes);
 
+const whyOneSimRoutes = require("./routes/whyOneSim.routes");
+app.use("/api/why-onesim", whyOneSimRoutes);
+
 
 
 module.exports = app;
