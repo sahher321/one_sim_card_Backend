@@ -70,6 +70,9 @@ app.use("/api/why-onesim", whyOneSimRoutes);
 const pricingPlansRoutes = require("./routes/pricingPlans.routes");
 app.use("/api/pricing-plans", pricingPlansRoutes);
 
+const iotSolutionsRoutes = require("./routes/iotSolutions.routes");
+app.use("/api/iot-solutions", iotSolutionsRoutes);
+
 
 
 module.exports = app;
