@@ -73,6 +73,9 @@ app.use("/api/pricing-plans", pricingPlansRoutes);
 const iotSolutionsRoutes = require("./routes/iotSolutions.routes");
 app.use("/api/iot-solutions", iotSolutionsRoutes);
 
+const homeContentRoutes = require("./routes/homeContent.routes");
+app.use("/api/home-content", homeContentRoutes);
+
 
 
 module.exports = app;
