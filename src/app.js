@@ -4,6 +4,10 @@ const app = express();
 const cors = require("cors");
 app.use(cors());
 
+const sitemapRoutes = require("./routes/sitemap.routes");
+app.use("/", sitemapRoutes);
+
+
 app.get("/", (req, res) => {
     res.send("one sim backend run successfully");
 });
